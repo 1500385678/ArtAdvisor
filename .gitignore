@@ -3,3 +3,8 @@
 node_modules/
 .venv/
 __pycache__/
+# Backend
+backend/.venv/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/.env

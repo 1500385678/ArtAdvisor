@@ -1,0 +1,15 @@
+# ArtAdvisor · Backend · Python 依赖
+# Phase 1 - MVP 起步版本 (2026-08-27)
+
+# Web 框架
+fastapi==0.128.8
+uvicorn[standard]==0.39.0
+
+# 数据
+pydantic==2.10.4
+
+# 鉴权 (Phase 1 后期接入飞书 OAuth)
+PyJWT==2.10.1
+
+# 工具
+python-dotenv==1.0.1
