@@ -1,0 +1,1548 @@
+{
+  "meta": {
+    "project": "ArtAdvisor",
+    "module": "艺术家库 · Artists",
+    "version": "0.1.0",
+    "batch": 1,
+    "total": 53,
+    "target": 200,
+    "source": "data/artworks-source-list.md (66 候选) + data/artworks.json (70 部已入库) 双向聚合 + _ArtLib/03_艺术史参考",
+    "created_at": "2026-09-03",
+    "updated_at": "2026-09-03",
+    "schema_version": "v1",
+    "schema_fields": 19,
+    "note": "Phase 0 任务 3 起草 v0.1.0:53 位艺术家从 70 部已入库作品去重 + 源清单候选补全(ar-052/053 伊斯兰段 2 位 + ar-031~037 当代建筑 7 位 + ar-038/039 摄影 2 位 + ar-040~043 拉美/美国/非洲/数字 4 位),覆盖 6 大区域(西方/东方/伊斯兰/拉美/非洲/数字)与 30+ 流派(文艺复兴/巴洛克/荷兰黄金/新古典/印象派/后印象/立体/表现/抽象/超现实/包豪斯/极简/加泰罗尼亚现代/有机建筑/参数化/新乡土/包豪斯清水混凝土/解构/摄影(银版+决定性瞬间)/魔幻现实/美国现代/非洲当代/数字当代/北宋山水/院体/写意/茶道/日本汉画/波斯细密/萨非建筑),tier S/A 共 53 位;未收录 3 位'佚名/传'(相阿弥(传) + 唐代马君祥画工集体 + 元代画工集体,均为历史匿名/集体创作,不入艺术家库);目标 200+ 后续按 03 艺术史参考 + 04 视觉风格库 + 09 案例库 续推(ar-054+ 候选:弗莱文/塔马约/El Anatsui/包豪斯家具/瑞士平面/中国近现代/日本浮世绘/日本现代建筑等)"
+  },
+  "artists": [
+    {
+      "id": "ar-001",
+      "name_cn": "列奥纳多·达·芬奇",
+      "name_en": "Leonardo da Vinci",
+      "region": "西方",
+      "country": "意大利",
+      "birth_year": 1452,
+      "death_year": 1519,
+      "lifespan": "1452-1519",
+      "age": 67,
+      "primary_period": "文艺复兴 · 盛期",
+      "primary_style": "写实主义 / Sfumato 烟雾法",
+      "movements": [
+        "文艺复兴",
+        "盛期文艺复兴"
+      ],
+      "mediums": [
+        "绘画",
+        "发明",
+        "解剖学"
+      ],
+      "bio_short": "全才型艺术家,代表作《蒙娜丽莎》《最后的晚餐》,Sfumato(烟雾法)开山鼻祖,把科学(解剖/光学)与艺术融为一体。",
+      "linked_artwork_ids": [
+        "aw-001",
+        "aw-002"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:1-2 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-002",
+      "name_cn": "米开朗基罗·博那罗蒂",
+      "name_en": "Michelangelo Buonarroti",
+      "region": "西方",
+      "country": "意大利",
+      "birth_year": 1475,
+      "death_year": 1564,
+      "lifespan": "1475-1564",
+      "age": 89,
+      "primary_period": "文艺复兴 · 盛期",
+      "primary_style": "雕塑 / 湿壁画 / 建筑",
+      "movements": [
+        "文艺复兴",
+        "盛期文艺复兴",
+        "矫饰主义(晚期)"
+      ],
+      "mediums": [
+        "雕塑",
+        "湿壁画",
+        "建筑"
+      ],
+      "bio_short": "文艺复兴三杰之一,代表作《大卫》《创世纪》天顶画,雕塑中的人体张力与湿壁画的力量感是盛期文艺复兴的巅峰。",
+      "linked_artwork_ids": [
+        "aw-003",
+        "aw-004"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:3-4 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-003",
+      "name_cn": "拉斐尔·桑齐奥",
+      "name_en": "Raffaello Sanzio",
+      "region": "西方",
+      "country": "意大利",
+      "birth_year": 1483,
+      "death_year": 1520,
+      "lifespan": "1483-1520",
+      "age": 37,
+      "primary_period": "文艺复兴 · 盛期",
+      "primary_style": "古典主义 / 优雅平衡",
+      "movements": [
+        "文艺复兴",
+        "盛期文艺复兴"
+      ],
+      "mediums": [
+        "绘画",
+        "建筑"
+      ],
+      "bio_short": "文艺复兴三杰最年轻者,代表作《雅典学院》《西斯廷圣母》,以和谐、平衡、优雅著称,把柏拉图式理想美推到极致。",
+      "linked_artwork_ids": [
+        "aw-005",
+        "aw-006"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:5-6 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-004",
+      "name_cn": "菲利波·布鲁内莱斯基",
+      "name_en": "Filippo Brunelleschi",
+      "region": "西方",
+      "country": "意大利",
+      "birth_year": 1377,
+      "death_year": 1446,
+      "lifespan": "1377-1446",
+      "age": 69,
+      "primary_period": "文艺复兴 · 早期",
+      "primary_style": "建筑 / 线性透视",
+      "movements": [
+        "文艺复兴",
+        "早期文艺复兴",
+        "建筑革命"
+      ],
+      "mediums": [
+        "建筑",
+        "工程"
+      ],
+      "bio_short": "佛罗伦萨圣母百花大教堂穹顶建造者,线性透视法的发明者之一,文艺复兴建筑之父。",
+      "linked_artwork_ids": [
+        "aw-007"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:7 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-005",
+      "name_cn": "卡拉瓦乔",
+      "name_en": "Caravaggio",
+      "region": "西方",
+      "country": "意大利",
+      "birth_year": 1571,
+      "death_year": 1610,
+      "lifespan": "1571-1610",
+      "age": 39,
+      "primary_period": "巴洛克",
+      "primary_style": "明暗对照法 / 自然主义",
+      "movements": [
+        "巴洛克",
+        "卡拉瓦乔画派"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "把宗教人物从理想化拉回街头平民,tenebrism(强烈明暗对比)开山鼻祖,影响整个 17 世纪欧洲。",
+      "linked_artwork_ids": [
+        "aw-008",
+        "aw-009"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:8-9 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-006",
+      "name_cn": "彼得·保罗·鲁本斯",
+      "name_en": "Peter Paul Rubens",
+      "region": "西方",
+      "country": "佛兰德斯(今比利时)",
+      "birth_year": 1577,
+      "death_year": 1640,
+      "lifespan": "1577-1640",
+      "age": 63,
+      "primary_period": "巴洛克",
+      "primary_style": "动感 / 肉体 / 宗教神话题材",
+      "movements": [
+        "巴洛克",
+        "佛兰德斯巴洛克"
+      ],
+      "mediums": [
+        "绘画",
+        "外交"
+      ],
+      "bio_short": "佛兰德斯巴洛克代表,巴洛克绘画的感官与动态典范,晚期成为欧洲外交官。",
+      "linked_artwork_ids": [
+        "aw-010"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:10 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-007",
+      "name_cn": "济安·洛伦佐·贝尼尼",
+      "name_en": "Gian Lorenzo Bernini",
+      "region": "西方",
+      "country": "意大利",
+      "birth_year": 1598,
+      "death_year": 1680,
+      "lifespan": "1598-1680",
+      "age": 82,
+      "primary_period": "巴洛克",
+      "primary_style": "巴洛克雕塑 / 喷泉 / 建筑",
+      "movements": [
+        "巴洛克",
+        "罗马巴洛克"
+      ],
+      "mediums": [
+        "雕塑",
+        "建筑",
+        "戏剧"
+      ],
+      "bio_short": "罗马巴洛克全才,圣彼得广场柱廊的设计者,把雕塑的戏剧性瞬间凝固到极致。",
+      "linked_artwork_ids": [
+        "aw-011"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:11 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-008",
+      "name_cn": "约翰内斯·维米尔",
+      "name_en": "Johannes Vermeer",
+      "region": "西方",
+      "country": "荷兰",
+      "birth_year": 1632,
+      "death_year": 1675,
+      "lifespan": "1632-1675",
+      "age": 43,
+      "primary_period": "荷兰黄金时代",
+      "primary_style": "风俗画 / 光线诗意",
+      "movements": [
+        "荷兰黄金时代",
+        "风俗画"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "代尔夫特的'光线诗人',代表作《戴珍珠耳环的少女》,17 世纪荷兰市民生活的诗性瞬间。",
+      "linked_artwork_ids": [
+        "aw-012"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:12 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-009",
+      "name_cn": "伦勃朗·范·莱因",
+      "name_en": "Rembrandt van Rijn",
+      "region": "西方",
+      "country": "荷兰",
+      "birth_year": 1606,
+      "death_year": 1669,
+      "lifespan": "1606-1669",
+      "age": 63,
+      "primary_period": "荷兰黄金时代",
+      "primary_style": "明暗法 / 心理肖像",
+      "movements": [
+        "荷兰黄金时代",
+        "伦勃朗画派"
+      ],
+      "mediums": [
+        "绘画",
+        "蚀刻版画"
+      ],
+      "bio_short": "荷兰黄金时代巅峰,《夜巡》以群像的剧场化打破传统肖像定式,把光线从技法升级为心理语言。",
+      "linked_artwork_ids": [
+        "aw-013"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:13 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-010",
+      "name_cn": "雅克-路易·大卫",
+      "name_en": "Jacques-Louis David",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1748,
+      "death_year": 1825,
+      "lifespan": "1748-1825",
+      "age": 77,
+      "primary_period": "新古典主义",
+      "primary_style": "新古典主义 / 政治叙事",
+      "movements": [
+        "新古典主义"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "法国新古典主义旗手,《荷拉斯兄弟之誓》以罗马式道德训诫为法国大革命铺路,后画《拿破仑加冕》记录权力。",
+      "linked_artwork_ids": [
+        "aw-014",
+        "aw-015"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:14-15 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-011",
+      "name_cn": "让-奥古斯特-多米尼克·安格尔",
+      "name_en": "Jean-Auguste-Dominique Ingres",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1780,
+      "death_year": 1867,
+      "lifespan": "1780-1867",
+      "age": 87,
+      "primary_period": "新古典主义",
+      "primary_style": "新古典主义 / 东方主义",
+      "movements": [
+        "新古典主义",
+        "学院派"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "大卫之后法国学院派领袖,《大宫女》《土耳其浴室》以拉长人体与冷色釉光延续安格尔式古典。",
+      "linked_artwork_ids": [
+        "aw-016",
+        "aw-017"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:16-17 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-012",
+      "name_cn": "克劳德·莫奈",
+      "name_en": "Claude Monet",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1840,
+      "death_year": 1926,
+      "lifespan": "1840-1926",
+      "age": 86,
+      "primary_period": "印象派",
+      "primary_style": "印象派 / 外光 / 连作",
+      "movements": [
+        "印象派"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "印象派命名人(《印象·日出》),晚期《睡莲》连作把外光与时间意识推到极致,Giverny 花园是 20 世纪艺术的发动机。",
+      "linked_artwork_ids": [
+        "aw-018",
+        "aw-019"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:18-19 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-013",
+      "name_cn": "皮埃尔-奥古斯特·雷诺阿",
+      "name_en": "Pierre-Auguste Renoir",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1841,
+      "death_year": 1919,
+      "lifespan": "1841-1919",
+      "age": 78,
+      "primary_period": "印象派",
+      "primary_style": "印象派 / 人物 / 暖色",
+      "movements": [
+        "印象派"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "印象派中的人物与享乐派代表,《煎饼磨坊的舞会》以温暖光斑定格巴黎蒙马特的轻盈瞬间。",
+      "linked_artwork_ids": [
+        "aw-020"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:20 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-014",
+      "name_cn": "埃德加·德加",
+      "name_en": "Edgar Degas",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1834,
+      "death_year": 1917,
+      "lifespan": "1834-1917",
+      "age": 83,
+      "primary_period": "印象派",
+      "primary_style": "印象派 / 舞女 / 截构图",
+      "movements": [
+        "印象派"
+      ],
+      "mediums": [
+        "绘画",
+        "雕塑"
+      ],
+      "bio_short": "印象派中的古典主义者与舞女画师,《舞蹈课》以截取构图与俯视角度把舞女训练日常化。",
+      "linked_artwork_ids": [
+        "aw-021"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:21 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-015",
+      "name_cn": "约瑟夫·帕克斯顿",
+      "name_en": "Joseph Paxton",
+      "region": "西方",
+      "country": "英国",
+      "birth_year": 1803,
+      "death_year": 1865,
+      "lifespan": "1803-1865",
+      "age": 62,
+      "primary_period": "工业革命 · 建筑",
+      "primary_style": "预制装配 / 玻璃铁结构",
+      "movements": [
+        "工业建筑",
+        "水晶宫"
+      ],
+      "mediums": [
+        "建筑",
+        "园艺"
+      ],
+      "bio_short": "水晶宫设计者,玻璃与铸铁预制装配的工业建筑鼻祖,直接启发现代主义预制概念。",
+      "linked_artwork_ids": [
+        "aw-022"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:22 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-016",
+      "name_cn": "文森特·梵高",
+      "name_en": "Vincent van Gogh",
+      "region": "西方",
+      "country": "荷兰",
+      "birth_year": 1853,
+      "death_year": 1890,
+      "lifespan": "1853-1890",
+      "age": 37,
+      "primary_period": "后印象派",
+      "primary_style": "后印象派 / 表现性笔触",
+      "movements": [
+        "后印象派",
+        "表现主义(影响)"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "后印象派最具表现性代表,《星月夜》《向日葵》以厚涂笔触与情感色彩重塑绘画的'主体性'。",
+      "linked_artwork_ids": [
+        "aw-023",
+        "aw-024"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:23-24 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-017",
+      "name_cn": "保罗·塞尚",
+      "name_en": "Paul Cézanne",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1839,
+      "death_year": 1906,
+      "lifespan": "1839-1906",
+      "age": 67,
+      "primary_period": "后印象派",
+      "primary_style": "后印象派 / 几何结构",
+      "movements": [
+        "后印象派",
+        "立体主义(影响)"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "现代主义之父,《圣维克多山》连作以几何块面拆解自然,'用圆柱体、球体、锥体处理自然'。",
+      "linked_artwork_ids": [
+        "aw-025",
+        "aw-026"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:25 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-018",
+      "name_cn": "保罗·高更",
+      "name_en": "Paul Gauguin",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1848,
+      "death_year": 1903,
+      "lifespan": "1848-1903",
+      "age": 55,
+      "primary_period": "后印象派 / 综合主义",
+      "primary_style": "综合主义 / 原始主义",
+      "movements": [
+        "后印象派",
+        "综合主义",
+        "原始主义"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "放弃巴黎都市文明赴塔希提,《我们从哪里来?》以原始主义与色块边界重塑象征。",
+      "linked_artwork_ids": [
+        "aw-025",
+        "aw-026"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:26 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-019",
+      "name_cn": "巴勃罗·毕加索",
+      "name_en": "Pablo Picasso",
+      "region": "西方",
+      "country": "西班牙",
+      "birth_year": 1881,
+      "death_year": 1973,
+      "lifespan": "1881-1973",
+      "age": 92,
+      "primary_period": "立体主义 / 多阶段",
+      "primary_style": "立体主义 / 蓝色/玫瑰/非洲/立体/超现实/晚期",
+      "movements": [
+        "立体主义",
+        "立体主义(共创)",
+        "超现实主义(影响)"
+      ],
+      "mediums": [
+        "绘画",
+        "雕塑",
+        "陶瓷"
+      ],
+      "bio_short": "20 世纪产量最高、风格最多变艺术家,《亚维农少女》共创立体主义,《格尔尼卡》以立体语法画战争。",
+      "linked_artwork_ids": [
+        "aw-027",
+        "aw-028"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:27-28 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-020",
+      "name_cn": "乔治·布拉克",
+      "name_en": "Georges Braque",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1882,
+      "death_year": 1963,
+      "lifespan": "1882-1963",
+      "age": 81,
+      "primary_period": "立体主义",
+      "primary_style": "立体主义(共创)",
+      "movements": [
+        "立体主义",
+        "立体主义(共创)"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "立体主义共同创始人,《葡萄牙人》以字母 stencil 把文字引入画面,是分析的立体主义典范。",
+      "linked_artwork_ids": [
+        "aw-029"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:29 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-021",
+      "name_cn": "费尔南·莱热",
+      "name_en": "Fernand Léger",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1881,
+      "death_year": 1955,
+      "lifespan": "1881-1955",
+      "age": 74,
+      "primary_period": "立体主义 → 机械美学",
+      "primary_style": "机械美学 / 管状形体",
+      "movements": [
+        "立体主义",
+        "机械美学"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "从立体主义转入机械美学,《城市》以管状形体与原色块面重塑现代都市节奏。",
+      "linked_artwork_ids": [
+        "aw-030"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:30 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-022",
+      "name_cn": "爱德华·蒙克",
+      "name_en": "Edvard Munch",
+      "region": "西方",
+      "country": "挪威",
+      "birth_year": 1863,
+      "death_year": 1944,
+      "lifespan": "1863-1944",
+      "age": 81,
+      "primary_period": "表现主义",
+      "primary_style": "表现主义 / 焦虑主题",
+      "movements": [
+        "表现主义"
+      ],
+      "mediums": [
+        "绘画",
+        "版画"
+      ],
+      "bio_short": "挪威表现主义先驱,《呐喊》以扭曲线条与血色天空把现代焦虑视觉化,影响整个德国表现主义。",
+      "linked_artwork_ids": [
+        "aw-031"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:31 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-023",
+      "name_cn": "瓦西里·康定斯基",
+      "name_en": "Wassily Kandinsky",
+      "region": "西方",
+      "country": "俄罗斯 → 德国/法国",
+      "birth_year": 1866,
+      "death_year": 1944,
+      "lifespan": "1866-1944",
+      "age": 78,
+      "primary_period": "抽象艺术",
+      "primary_style": "抽象艺术 / 抒情抽象",
+      "movements": [
+        "抽象艺术",
+        "青骑士",
+        "包豪斯(教师)"
+      ],
+      "mediums": [
+        "绘画",
+        "理论"
+      ],
+      "bio_short": "抽象艺术奠基人之一,《构成第七号》以纯抽象把音乐性引入视觉,著《论艺术的精神》。",
+      "linked_artwork_ids": [
+        "aw-032"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:32 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-024",
+      "name_cn": "马克·罗斯科",
+      "name_en": "Mark Rothko",
+      "region": "西方",
+      "country": "美国(拉脱维亚裔)",
+      "birth_year": 1903,
+      "death_year": 1970,
+      "lifespan": "1903-1970",
+      "age": 67,
+      "primary_period": "抽象表现主义",
+      "primary_style": "色域绘画 / 沉思",
+      "movements": [
+        "抽象表现主义",
+        "色域绘画"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "色域绘画代表,《橙、红、黄》以两三个色块悬浮邀请观众冥想,晚期教堂式巨幅走入悲剧。",
+      "linked_artwork_ids": [
+        "aw-033"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:33 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-025",
+      "name_cn": "萨尔瓦多·达利",
+      "name_en": "Salvador Dalí",
+      "region": "西方",
+      "country": "西班牙",
+      "birth_year": 1904,
+      "death_year": 1989,
+      "lifespan": "1904-1989",
+      "age": 85,
+      "primary_period": "超现实主义",
+      "primary_style": "超现实主义 / 偏执狂批判法",
+      "movements": [
+        "超现实主义"
+      ],
+      "mediums": [
+        "绘画",
+        "摄影",
+        "电影"
+      ],
+      "bio_short": "超现实主义最具公众认知度的代表,《记忆的永恒》以融化时钟把潜意识时间视觉化。",
+      "linked_artwork_ids": [
+        "aw-034"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:34 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-026",
+      "name_cn": "勒内·马格利特",
+      "name_en": "René Magritte",
+      "region": "西方",
+      "country": "比利时",
+      "birth_year": 1898,
+      "death_year": 1967,
+      "lifespan": "1898-1967",
+      "age": 69,
+      "primary_period": "超现实主义",
+      "primary_style": "超现实主义 / 概念图像",
+      "movements": [
+        "超现实主义"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "比利时超现实主义哲学家型画家,《图像的背叛》以'这不是一支烟斗'颠覆符号与实指关系。",
+      "linked_artwork_ids": [
+        "aw-035"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:35 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-027",
+      "name_cn": "瓦尔特·格罗皮乌斯",
+      "name_en": "Walter Gropius",
+      "region": "西方",
+      "country": "德国",
+      "birth_year": 1883,
+      "death_year": 1969,
+      "lifespan": "1883-1969",
+      "age": 86,
+      "primary_period": "现代主义 · 建筑",
+      "primary_style": "包豪斯 / 现代主义建筑",
+      "movements": [
+        "包豪斯",
+        "现代主义建筑"
+      ],
+      "mediums": [
+        "建筑",
+        "教育"
+      ],
+      "bio_short": "包豪斯学校创始人,《包豪斯校舍》以玻璃幕墙 + 功能分区奠定现代主义建筑语言。",
+      "linked_artwork_ids": [
+        "aw-036"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:36 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-028",
+      "name_cn": "密斯·凡·德·罗",
+      "name_en": "Ludwig Mies van der Rohe",
+      "region": "西方",
+      "country": "德国 → 美国",
+      "birth_year": 1886,
+      "death_year": 1969,
+      "lifespan": "1886-1969",
+      "age": 83,
+      "primary_period": "现代主义 · 建筑",
+      "primary_style": "现代主义 / 少即是多",
+      "movements": [
+        "包豪斯(末期校长)",
+        "现代主义建筑"
+      ],
+      "mediums": [
+        "建筑",
+        "家具"
+      ],
+      "bio_short": "包豪斯末任校长,'少即是多'代表,《巴塞罗那馆》《范斯沃斯住宅》把流动空间与钢结构推到极致。",
+      "linked_artwork_ids": [
+        "aw-037",
+        "aw-038"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:37-38 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-029",
+      "name_cn": "唐纳德·贾德",
+      "name_en": "Donald Judd",
+      "region": "西方",
+      "country": "美国",
+      "birth_year": 1928,
+      "death_year": 1994,
+      "lifespan": "1928-1994",
+      "age": 66,
+      "primary_period": "极简主义",
+      "primary_style": "极简主义 / 物体本体",
+      "movements": [
+        "极简主义"
+      ],
+      "mediums": [
+        "雕塑",
+        "家具",
+        "理论"
+      ],
+      "bio_short": "极简主义理论家与实践者,《无题》以工业材料 + 整数序列挑战雕塑与物体的边界。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:41 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-030",
+      "name_cn": "丹·弗莱文",
+      "name_en": "Dan Flavin",
+      "region": "西方",
+      "country": "美国",
+      "birth_year": 1933,
+      "death_year": 1996,
+      "lifespan": "1933-1996",
+      "age": 63,
+      "primary_period": "极简主义",
+      "primary_style": "极简主义 / 荧光灯",
+      "movements": [
+        "极简主义"
+      ],
+      "mediums": [
+        "装置",
+        "灯光"
+      ],
+      "bio_short": "极简主义灯光装置代表,《荧光灯装置》以商用荧光灯管 + 空间结构重塑光的雕塑性。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:42 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-031",
+      "name_cn": "安东尼·高迪",
+      "name_en": "Antoni Gaudí",
+      "region": "西方",
+      "country": "西班牙",
+      "birth_year": 1852,
+      "death_year": 1926,
+      "lifespan": "1852-1926",
+      "age": 74,
+      "primary_period": "现代主义 · 加泰罗尼亚",
+      "primary_style": "加泰罗尼亚现代主义 / 曲线 / 教堂",
+      "movements": [
+        "加泰罗尼亚现代主义",
+        "新艺术运动(分支)"
+      ],
+      "mediums": [
+        "建筑"
+      ],
+      "bio_short": "巴塞罗那圣家族大教堂设计师,有机曲线 + 几何马赛克 + 结构实验的 20 世纪教堂巅峰。",
+      "linked_artwork_ids": [
+        "aw-055",
+        "aw-056"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:57-58 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-032",
+      "name_cn": "弗兰克·劳埃德·赖特",
+      "name_en": "Frank Lloyd Wright",
+      "region": "西方",
+      "country": "美国",
+      "birth_year": 1867,
+      "death_year": 1959,
+      "lifespan": "1867-1959",
+      "age": 92,
+      "primary_period": "现代主义 · 美国",
+      "primary_style": "有机建筑 / 草原住宅",
+      "movements": [
+        "现代主义建筑",
+        "有机建筑"
+      ],
+      "mediums": [
+        "建筑"
+      ],
+      "bio_short": "美国现代主义之父,《流水别墅》以悬挑与自然嵌入,《古根海姆》以螺旋连续空间挑战博物馆范式。",
+      "linked_artwork_ids": [
+        "aw-057",
+        "aw-058"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:59-60 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-033",
+      "name_cn": "扎哈·哈迪德",
+      "name_en": "Zaha Hadid",
+      "region": "西方",
+      "country": "伊拉克 → 英国",
+      "birth_year": 1950,
+      "death_year": 2016,
+      "lifespan": "1950-2016",
+      "age": 66,
+      "primary_period": "当代 · 建筑",
+      "primary_style": "参数化 / 解构",
+      "movements": [
+        "参数化主义",
+        "解构主义(影响)"
+      ],
+      "mediums": [
+        "建筑"
+      ],
+      "bio_short": "普利兹克奖首位女性得主,《广州歌剧院》以双砾石形体 + 参数化曲面重塑中国地标建筑语言。",
+      "linked_artwork_ids": [
+        "aw-059"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:61 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-034",
+      "name_cn": "王澍",
+      "name_en": "Wang Shu",
+      "region": "东方",
+      "country": "中国",
+      "birth_year": 1963,
+      "death_year": null,
+      "lifespan": "1963-至今",
+      "age": null,
+      "primary_period": "当代 · 建筑",
+      "primary_style": "新乡土 / 循环建造",
+      "movements": [
+        "新乡土建筑",
+        "普利兹克奖(2012)"
+      ],
+      "mediums": [
+        "建筑",
+        "教育"
+      ],
+      "bio_short": "2012 普利兹克奖首位中国得主,《中国美术学院象山校区》以瓦爿墙 + 再生材料重塑中国本土建筑语言。",
+      "linked_artwork_ids": [
+        "aw-043",
+        "aw-060"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:62 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-035",
+      "name_cn": "安藤忠雄",
+      "name_en": "Tadao Ando",
+      "region": "东方",
+      "country": "日本",
+      "birth_year": 1941,
+      "death_year": null,
+      "lifespan": "1941-至今",
+      "age": null,
+      "primary_period": "当代 · 建筑",
+      "primary_style": "清水混凝土 / 光之教堂",
+      "movements": [
+        "极简主义(建筑)",
+        "日本当代建筑"
+      ],
+      "mediums": [
+        "建筑"
+      ],
+      "bio_short": "自学成才的普利兹克奖建筑师,《光之教堂》《水之教堂》《直岛地中美术馆》以清水混凝土 + 自然光凝练精神空间。",
+      "linked_artwork_ids": [
+        "aw-039",
+        "aw-040",
+        "aw-061"
+      ],
+      "linked_artwork_count": 3,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:39-40,63 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-036",
+      "name_cn": "贝聿铭",
+      "name_en": "I. M. Pei",
+      "region": "东方",
+      "country": "中国 → 美国",
+      "birth_year": 1917,
+      "death_year": 2019,
+      "lifespan": "1917-2019",
+      "age": 102,
+      "primary_period": "现代主义 · 建筑",
+      "primary_style": "现代主义 / 几何 / 玻璃",
+      "movements": [
+        "现代主义建筑",
+        "贝氏几何"
+      ],
+      "mediums": [
+        "建筑"
+      ],
+      "bio_short": "华裔现代主义建筑大师,《卢浮宫玻璃金字塔》以玻璃金字塔 + 古典轴线重塑博物馆入口,《苏州博物馆》延续东方园林几何。",
+      "linked_artwork_ids": [
+        "aw-062",
+        "aw-063"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:64-65 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-037",
+      "name_cn": "雷姆·库哈斯",
+      "name_en": "Rem Koolhaas",
+      "region": "西方",
+      "country": "荷兰",
+      "birth_year": 1944,
+      "death_year": null,
+      "lifespan": "1944-至今",
+      "age": null,
+      "primary_period": "当代 · 建筑",
+      "primary_style": "OMA / 大都市主义",
+      "movements": [
+        "解构主义",
+        "OMA"
+      ],
+      "mediums": [
+        "建筑",
+        "理论"
+      ],
+      "bio_short": "OMA 创始人,《CCTV 大裤衩》以非线性环状塔楼挑战结构工程与北京城市象征。",
+      "linked_artwork_ids": [
+        "aw-064"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:66 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-038",
+      "name_cn": "路易·达盖尔",
+      "name_en": "Louis Daguerre",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1787,
+      "death_year": 1851,
+      "lifespan": "1787-1851",
+      "age": 64,
+      "primary_period": "19 世纪 · 摄影",
+      "primary_style": "银版摄影法",
+      "movements": [
+        "摄影(技术发明)"
+      ],
+      "mediums": [
+        "摄影",
+        "化学"
+      ],
+      "bio_short": "银版摄影法发明者,《巴黎寺院街》(1838)是人类第一张有人的城市影像,摄影技术元年。",
+      "linked_artwork_ids": [
+        "aw-065"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:67(缺口补:摄影起点) + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-039",
+      "name_cn": "亨利·卡蒂埃-布列松",
+      "name_en": "Henri Cartier-Bresson",
+      "region": "西方",
+      "country": "法国",
+      "birth_year": 1908,
+      "death_year": 2004,
+      "lifespan": "1908-2004",
+      "age": 96,
+      "primary_period": "20 世纪 · 摄影",
+      "primary_style": "决定性瞬间",
+      "movements": [
+        "街头摄影",
+        "马格南图片社"
+      ],
+      "mediums": [
+        "摄影"
+      ],
+      "bio_short": "马格南图片社创始人,《男孩与陶罐》以决定性瞬间把摄影从记录提升为'视觉散文'。",
+      "linked_artwork_ids": [
+        "aw-066"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:68(缺口补:街头摄影) + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-040",
+      "name_cn": "弗里达·卡罗",
+      "name_en": "Frida Kahlo",
+      "region": "拉美",
+      "country": "墨西哥",
+      "birth_year": 1907,
+      "death_year": 1954,
+      "lifespan": "1907-1954",
+      "age": 47,
+      "primary_period": "20 世纪 · 拉美现代",
+      "primary_style": "魔幻现实 / 自传体",
+      "movements": [
+        "魔幻现实主义",
+        "拉美现代"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "墨西哥魔幻现实代表,《两个弗里达》以双重自我 + 墨西哥传统服饰重塑女性身份。",
+      "linked_artwork_ids": [
+        "aw-067"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:69(缺口补:拉美现代) + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-041",
+      "name_cn": "乔治亚·欧姬芙",
+      "name_en": "Georgia O'Keeffe",
+      "region": "西方",
+      "country": "美国",
+      "birth_year": 1887,
+      "death_year": 1986,
+      "lifespan": "1887-1986",
+      "age": 99,
+      "primary_period": "20 世纪 · 美国现代",
+      "primary_style": "花卉放大 / 沙漠骨骼",
+      "movements": [
+        "美国现代主义",
+        "精确主义"
+      ],
+      "mediums": [
+        "绘画"
+      ],
+      "bio_short": "美国现代主义代表,'花卉女王'《黑色鸢尾花 III》以放大局部把自然抽象为感官符号。",
+      "linked_artwork_ids": [
+        "aw-068"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:70(缺口补:美国现代) + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-042",
+      "name_cn": "威廉·肯特里奇",
+      "name_en": "William Kentridge",
+      "region": "非洲",
+      "country": "南非",
+      "birth_year": 1955,
+      "death_year": null,
+      "lifespan": "1955-至今",
+      "age": null,
+      "primary_period": "当代 · 非洲当代",
+      "primary_style": "炭笔动画 / 后殖民",
+      "movements": [
+        "非洲当代",
+        "后殖民艺术"
+      ],
+      "mediums": [
+        "绘画",
+        "动画",
+        "歌剧"
+      ],
+      "bio_short": "南非当代艺术代表,《乌布说真相》以炭笔动画 + 擦除 + 影像把后殖民记忆剧场化。",
+      "linked_artwork_ids": [
+        "aw-069"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md(缺口补:非洲当代) + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-043",
+      "name_cn": "teamLab(猪子寿之)",
+      "name_en": "teamLab (Toshiyuki Inoko)",
+      "region": "东方",
+      "country": "日本",
+      "birth_year": 2001,
+      "death_year": null,
+      "lifespan": "2001-至今",
+      "age": null,
+      "primary_period": "21 世纪 · 数字当代",
+      "primary_style": "跨边界艺术团队 / 实时互动",
+      "movements": [
+        "数字当代",
+        "沉浸式互动"
+      ],
+      "mediums": [
+        "数字装置",
+        "算法"
+      ],
+      "bio_short": "2001 年创立的跨学科艺术团队,《花与人的森林》以实时计算 + 投影 + 传感器把观众融入作品演化。",
+      "linked_artwork_ids": [
+        "aw-070"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md(缺口补:数字当代) + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-044",
+      "name_cn": "范宽",
+      "name_en": "Fan Kuan",
+      "region": "东方",
+      "country": "中国(北宋)",
+      "birth_year": 950,
+      "death_year": 1032,
+      "lifespan": "950-1032",
+      "age": 82,
+      "primary_period": "北宋山水",
+      "primary_style": "北宋山水 / 巨碑式山水",
+      "movements": [
+        "北宋山水",
+        "全景山水"
+      ],
+      "mediums": [
+        "水墨山水"
+      ],
+      "bio_short": "北宋山水三大家之首,《溪山行旅图》以正面巨碑式山水 + 雨点皴奠定北宋范式。",
+      "linked_artwork_ids": [
+        "aw-041"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:43 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-045",
+      "name_cn": "郭熙",
+      "name_en": "Guo Xi",
+      "region": "东方",
+      "country": "中国(北宋)",
+      "birth_year": 1020,
+      "death_year": 1090,
+      "lifespan": "1020-1090",
+      "age": 70,
+      "primary_period": "北宋山水",
+      "primary_style": "北宋山水 / 早春",
+      "movements": [
+        "北宋山水",
+        "三远法"
+      ],
+      "mediums": [
+        "水墨山水",
+        "画论"
+      ],
+      "bio_short": "北宋宫廷山水大家,《早春图》以蟹爪树 + 烟雾 + 三远法(高远/深远/平远)提出山水境界。",
+      "linked_artwork_ids": [
+        "aw-042"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:44 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-046",
+      "name_cn": "王维",
+      "name_en": "Wang Wei",
+      "region": "东方",
+      "country": "中国(唐)",
+      "birth_year": 701,
+      "death_year": 761,
+      "lifespan": "701-761",
+      "age": 60,
+      "primary_period": "唐代山水",
+      "primary_style": "文人画 / 诗画合一",
+      "movements": [
+        "文人画(初祖)",
+        "唐代山水"
+      ],
+      "mediums": [
+        "水墨山水",
+        "诗"
+      ],
+      "bio_short": "文人画初祖,'诗中有画,画中有诗',《辋川图》历代摹本流传,苏轼评其'画中有诗'。",
+      "linked_artwork_ids": [
+        "aw-043",
+        "aw-060"
+      ],
+      "linked_artwork_count": 2,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:45 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-047",
+      "name_cn": "宋徽宗(赵佶)",
+      "name_en": "Emperor Huizong of Song",
+      "region": "东方",
+      "country": "中国(北宋)",
+      "birth_year": 1082,
+      "death_year": 1135,
+      "lifespan": "1082-1135",
+      "age": 53,
+      "primary_period": "北宋 · 院体",
+      "primary_style": "宣和体 / 院体花鸟",
+      "movements": [
+        "院体画",
+        "瘦金书"
+      ],
+      "mediums": [
+        "花鸟",
+        "书法"
+      ],
+      "bio_short": "北宋皇帝艺术家,《瑞鹤图》以瘦金书题跋 + 瑞鹤群像 + 宫殿界画,把院体画推到极致。",
+      "linked_artwork_ids": [
+        "aw-044"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:46 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-048",
+      "name_cn": "八大山人(朱耷)",
+      "name_en": "Bada Shanren (Zhu Da)",
+      "region": "东方",
+      "country": "中国(明末清初)",
+      "birth_year": 1626,
+      "death_year": 1705,
+      "lifespan": "1626-1705",
+      "age": 79,
+      "primary_period": "明末清初 · 写意",
+      "primary_style": "大写意 / 孤冷",
+      "movements": [
+        "写意画",
+        "遗民画"
+      ],
+      "mediums": [
+        "写意花鸟",
+        "书法"
+      ],
+      "bio_short": "明皇裔出家为僧,《荷花水鸟图》以白眼向人的孤禽 + 极少笔墨标志大写意巅峰。",
+      "linked_artwork_ids": [
+        "aw-045"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:47 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-049",
+      "name_cn": "齐白石",
+      "name_en": "Qi Baishi",
+      "region": "东方",
+      "country": "中国(近现代)",
+      "birth_year": 1864,
+      "death_year": 1957,
+      "lifespan": "1864-1957",
+      "age": 93,
+      "primary_period": "近现代 · 写意",
+      "primary_style": "平民写意 / 红花墨叶",
+      "movements": [
+        "大写意(近代)",
+        "平民艺术"
+      ],
+      "mediums": [
+        "写意花鸟",
+        "篆刻"
+      ],
+      "bio_short": "从木匠到人民艺术家,《蛙声十里出山泉》以少胜多,把日常物象升华至诗境。",
+      "linked_artwork_ids": [
+        "aw-046"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:48 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-050",
+      "name_cn": "千利休",
+      "name_en": "Sen no Rikyū",
+      "region": "东方",
+      "country": "日本(安土桃山)",
+      "birth_year": 1522,
+      "death_year": 1591,
+      "lifespan": "1522-1591",
+      "age": 69,
+      "primary_period": "安土桃山 · 茶道",
+      "primary_style": "侘寂茶道",
+      "movements": [
+        "侘寂",
+        "茶道(集大成)"
+      ],
+      "mediums": [
+        "茶道",
+        "建筑(茶室)"
+      ],
+      "bio_short": "日本茶道集大成者,《待庵》以 1.5 叠(2.18 m²)茶室把侘寂精神物质化。",
+      "linked_artwork_ids": [
+        "aw-050"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:52 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-051",
+      "name_cn": "雪舟等扬",
+      "name_en": "Sesshū Tōyō",
+      "region": "东方",
+      "country": "日本(室町)",
+      "birth_year": 1420,
+      "death_year": 1506,
+      "lifespan": "1420-1506",
+      "age": 86,
+      "primary_period": "室町 · 水墨",
+      "primary_style": "汉画 / 泼墨山水",
+      "movements": [
+        "日本水墨(汉画)",
+        "室町画坛"
+      ],
+      "mediums": [
+        "水墨山水"
+      ],
+      "bio_short": "室町水墨大家,《泼墨山水图》以中国浙派 + 日本禅意,日本汉画典范。",
+      "linked_artwork_ids": [
+        "aw-051"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:53 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-052",
+      "name_cn": "毕扎德",
+      "name_en": "Kamāl ud-Dīn Behzād",
+      "region": "伊斯兰",
+      "country": "波斯(赫拉特/大不里士)",
+      "birth_year": 1455,
+      "death_year": 1535,
+      "lifespan": "1455-1535",
+      "age": 80,
+      "primary_period": "帖木儿晚期 → 萨非早期",
+      "primary_style": "赫拉特画派",
+      "movements": [
+        "波斯细密画(高峰)",
+        "赫拉特画派"
+      ],
+      "mediums": [
+        "细密画",
+        "画坊主管"
+      ],
+      "bio_short": "赫拉特画派掌门,《霍斯陆与席琳》以细密笔法 + 诗意构图奠定波斯细密画典范。",
+      "linked_artwork_ids": [
+        "aw-053"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:55 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-053",
+      "name_cn": "阿拔斯一世(萨非王朝)",
+      "name_en": "Shah Abbas I of Persia",
+      "region": "伊斯兰",
+      "country": "波斯(萨非)",
+      "birth_year": 1571,
+      "death_year": 1629,
+      "lifespan": "1571-1629",
+      "age": 58,
+      "primary_period": "萨非王朝 · 伊斯法罕",
+      "primary_style": "萨非建筑 / 伊斯法罕重都",
+      "movements": [
+        "萨非建筑",
+        "波斯-伊斯兰建筑"
+      ],
+      "mediums": [
+        "建筑(赞助人)"
+      ],
+      "bio_short": "萨非王朝阿拔斯大帝,《沙阿清真寺》以蓝色瓷砖 + 巨型 iwan 拱奠定伊斯法罕新都。",
+      "linked_artwork_ids": [
+        "aw-054"
+      ],
+      "linked_artwork_count": 1,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "artworks-source-list.md:56 + _ArtLib/03_艺术史参考"
+    }
+  ]
+}
