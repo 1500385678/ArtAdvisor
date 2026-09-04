@@ -2,16 +2,16 @@
   "meta": {
     "project": "ArtAdvisor",
     "module": "艺术家库 · Artists",
-    "version": "0.1.0",
-    "batch": 1,
-    "total": 53,
+    "version": "0.2.0",
+    "batch": 2,
+    "total": 63,
     "target": 200,
-    "source": "data/artworks-source-list.md (66 候选) + data/artworks.json (70 部已入库) 双向聚合 + _ArtLib/03_艺术史参考",
+    "source": "data/artworks-source-list.md (66 候选) + data/artworks.json (70 部已入库) 双向聚合 + _ArtLib/03_艺术史参考(2026-05-30)",
     "created_at": "2026-09-03",
-    "updated_at": "2026-09-03",
+    "updated_at": "2026-09-05",
     "schema_version": "v1",
     "schema_fields": 19,
-    "note": "Phase 0 任务 3 起草 v0.1.0:53 位艺术家从 70 部已入库作品去重 + 源清单候选补全(ar-052/053 伊斯兰段 2 位 + ar-031~037 当代建筑 7 位 + ar-038/039 摄影 2 位 + ar-040~043 拉美/美国/非洲/数字 4 位),覆盖 6 大区域(西方/东方/伊斯兰/拉美/非洲/数字)与 30+ 流派(文艺复兴/巴洛克/荷兰黄金/新古典/印象派/后印象/立体/表现/抽象/超现实/包豪斯/极简/加泰罗尼亚现代/有机建筑/参数化/新乡土/包豪斯清水混凝土/解构/摄影(银版+决定性瞬间)/魔幻现实/美国现代/非洲当代/数字当代/北宋山水/院体/写意/茶道/日本汉画/波斯细密/萨非建筑),tier S/A 共 53 位;未收录 3 位'佚名/传'(相阿弥(传) + 唐代马君祥画工集体 + 元代画工集体,均为历史匿名/集体创作,不入艺术家库);目标 200+ 后续按 03 艺术史参考 + 04 视觉风格库 + 09 案例库 续推(ar-054+ 候选:弗莱文/塔马约/El Anatsui/包豪斯家具/瑞士平面/中国近现代/日本浮世绘/日本现代建筑等)"
+    "note": "v0.1.0(09-03)53 位 + v0.2.0(09-05)batch 2 续推 10 位 = 63/200 (31.5%):① ar-054~056 极简主义补全 3 位(丹·弗莱文/艾格尼丝·马丁/唐纳德·贾德,与 03 艺术史参考手册第 7 节对齐,ar-054/055 作品尚未入库,linked_artwork_ids 空置);② ar-057 拉美补全 1 位(鲁菲诺·塔马约,tier A,与 ar-040 弗里达/欧姬芙同源拉美现代但段位更下游);③ ar-058 非洲当代补全 1 位(El Anatsui,tier A,加纳瓶盖金属装置,作品尚未入库);④ ar-059 包豪斯家具补全 1 位(马塞尔·布劳耶,与 ar-028 格罗皮乌斯/ ar-029 密斯同校但聚焦家具与钢管椅);⑤ ar-060 瑞士平面补全 1 位(约瑟夫·穆勒-布罗克曼,网格系统海报,作品未入库);⑥ ar-061~063 中国近现代补全 3 位(徐悲鸿写实/张大千泼彩/林风眠中西融合,东方区域从'传统水墨'段扩展到'近现代转型'新段,弥补 Phase 0 候选 4.5 中国近现代空缺);覆盖 6 区域 + 33 流派(本批新增极简/拉美现代/非洲当代/包豪斯家具/瑞士平面/中国近现代 6 段),tier S=49 / A=14(本批 8 S + 2 A);本批 10 位作品均未入库,linked_artwork_ids 全空,待 Phase 0 任务 2 续推 artworks 时按反向关联补全;后续 ar-064+ 候选(03 艺术史参考 + 04 视觉风格库 + 09 案例库):日本浮世绘(葛饰北斋/喜多川歌麿/歌川広重)/日本现代建筑(槙文彦/伊东丰雄/妹島和世)/北欧设计(阿尔瓦·阿尔托/汉斯·瓦格纳/阿恩·雅各布森)/数字当代(Refik Anadol/Beeple)/中国近现代补全(刘海粟/潘天寿/傅抱石)/包豪斯家具补(马歇尔·拉尤斯·布劳耶尔椅具)/美国抽象表现(波洛克/德·库宁/罗斯科已 ar-037)/超现实(恩斯特/马格利特已 ar-046/米罗)/ 摄影(韦斯顿/亚当斯/曼·雷)/ 拉美现代(博特罗)"
   },
   "artists": [
     {
@@ -1543,6 +1543,296 @@
       "tier": "A",
       "appraise_ready": true,
       "source_ref": "artworks-source-list.md:56 + _ArtLib/03_艺术史参考"
+    },
+    {
+      "id": "ar-054",
+      "name_cn": "丹·弗莱文",
+      "name_en": "Dan Flavin",
+      "region": "西方",
+      "country": "美国(乌克兰裔)",
+      "birth_year": 1933,
+      "death_year": 1996,
+      "lifespan": "1933-1996",
+      "age": 63,
+      "primary_period": "极简主义 · 1960s-1990s",
+      "primary_style": "荧光灯装置 / 工业光",
+      "movements": [
+        "极简主义",
+        "后极简",
+        "灯光艺术"
+      ],
+      "mediums": [
+        "装置",
+        "荧光灯",
+        "工业材料"
+      ],
+      "bio_short": "极简主义三大代表之一,把日常工业荧光灯管作为唯一媒介,以色彩与排列的精确编排让'光'本身成为雕塑。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": false,
+      "source_ref": "_ArtLib/03_艺术史参考手册 §7 极简主义 + 04_视觉风格库/艺术流派.md"
+    },
+    {
+      "id": "ar-055",
+      "name_cn": "艾格尼丝·马丁",
+      "name_en": "Agnes Martin",
+      "region": "西方",
+      "country": "加拿大-美国",
+      "birth_year": 1912,
+      "death_year": 2004,
+      "lifespan": "1912-2004",
+      "age": 92,
+      "primary_period": "极简主义 · 1960s-2000s",
+      "primary_style": "网格/水墨淡彩",
+      "movements": [
+        "极简主义",
+        "抽象表现(过渡)",
+        "禅意极简"
+      ],
+      "mediums": [
+        "布面丙烯",
+        "水墨",
+        "铅笔网格"
+      ],
+      "bio_short": "极简主义三大代表之一,网格画以极淡的铅笔线与水洗色彩营造冥想般的静谧,介于极简与禅意之间。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": false,
+      "source_ref": "_ArtLib/03_艺术史参考手册 §7 极简主义"
+    },
+    {
+      "id": "ar-056",
+      "name_cn": "唐纳德·贾德",
+      "name_en": "Donald Judd",
+      "region": "西方",
+      "country": "美国",
+      "birth_year": 1928,
+      "death_year": 1994,
+      "lifespan": "1928-1994",
+      "age": 66,
+      "primary_period": "极简主义 · 1960s-1990s",
+      "primary_style": "体量/盒状体",
+      "movements": [
+        "极简主义",
+        "体量艺术",
+        "后画布"
+      ],
+      "mediums": [
+        "金属",
+        "有机玻璃",
+        "工业材料"
+      ],
+      "bio_short": "极简主义理论旗手,《无题》系列以等距金属盒取代绘画笔触,用'体量'本身定义艺术对象,理论著作《特定对象》奠定极简主义批评基础。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": false,
+      "source_ref": "_ArtLib/03_艺术史参考手册 §7 极简主义"
+    },
+    {
+      "id": "ar-057",
+      "name_cn": "鲁菲诺·塔马约",
+      "name_en": "Rufino Tamayo",
+      "region": "拉美",
+      "country": "墨西哥",
+      "birth_year": 1899,
+      "death_year": 1991,
+      "lifespan": "1899-1991",
+      "age": 92,
+      "primary_period": "20 世纪墨西哥现代",
+      "primary_style": "拉美现代 / 前哥伦布色彩",
+      "movements": [
+        "拉美现代",
+        "墨西哥现代主义",
+        "前哥伦布复兴"
+      ],
+      "mediums": [
+        "油画",
+        "壁画",
+        "版画"
+      ],
+      "bio_short": "20 世纪墨西哥现代四大家之一(里维拉/奥罗斯科/西凯罗斯/塔马约),以欧普几何 + 前哥伦布土著色彩延续壁画运动。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "A",
+      "appraise_ready": false,
+      "source_ref": "data/artworks-source-list.md 待补缺口(拉美) + 04_视觉风格库/艺术流派.md"
+    },
+    {
+      "id": "ar-058",
+      "name_cn": "埃尔·阿纳苏伊",
+      "name_en": "El Anatsui",
+      "region": "非洲",
+      "country": "加纳(驻尼日利亚)",
+      "birth_year": 1944,
+      "death_year": null,
+      "lifespan": "1944-至今",
+      "age": 82,
+      "primary_period": "非洲当代 · 21 世纪",
+      "primary_style": "金属瓶盖装置 / 后殖民材料",
+      "movements": [
+        "非洲当代",
+        "后殖民艺术",
+        "回收材料"
+      ],
+      "mediums": [
+        "装置",
+        "金属瓶盖",
+        "缝合铜线"
+      ],
+      "bio_short": "加纳/尼日利亚当代艺术代表,把百万个啤酒瓶盖用铜线缝合为金属织物,呈现后殖民消费主义与西非传统的对话。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "A",
+      "appraise_ready": false,
+      "source_ref": "data/artworks-source-list.md 待补缺口(非洲) + 04_视觉风格库/艺术流派.md"
+    },
+    {
+      "id": "ar-059",
+      "name_cn": "马塞尔·布劳耶",
+      "name_en": "Marcel Breuer",
+      "region": "西方",
+      "country": "匈牙利(驻美)",
+      "birth_year": 1902,
+      "death_year": 1981,
+      "lifespan": "1902-1981",
+      "age": 79,
+      "primary_period": "包豪斯 · 1920s → 现代主义 · 1960s",
+      "primary_style": "钢管家具 / 现代主义建筑",
+      "movements": [
+        "包豪斯",
+        "国际式",
+        "现代主义建筑"
+      ],
+      "mediums": [
+        "家具",
+        "建筑",
+        "工业设计"
+      ],
+      "bio_short": "包豪斯学生 → 现代主义家具设计之父,《瓦西里椅》(1925)以弯曲钢管 + 皮革开创现代家具,后期转向建筑(巴黎 UNESCO 总部)。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": false,
+      "source_ref": "_ArtLib/03_艺术史参考手册 §6 包豪斯 + 04_视觉风格库/当代设计风格.md"
+    },
+    {
+      "id": "ar-060",
+      "name_cn": "约瑟夫·穆勒-布罗克曼",
+      "name_en": "Josef Müller-Brockmann",
+      "region": "西方",
+      "country": "瑞士",
+      "birth_year": 1914,
+      "death_year": 1996,
+      "lifespan": "1914-1996",
+      "age": 82,
+      "primary_period": "瑞士国际主义平面 · 1950s-1990s",
+      "primary_style": "瑞士网格 / 客观传达",
+      "movements": [
+        "瑞士国际主义平面",
+        "瑞士风格",
+        "现代主义平面"
+      ],
+      "mediums": [
+        "海报",
+        "字体",
+        "网格系统"
+      ],
+      "bio_short": "瑞士国际主义平面设计之父,《平面设计中的网格系统》(1981)成为全球设计教科书,以 Akzidenz-Grotesk + 严格网格奠定现代海报语法。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": false,
+      "source_ref": "04_视觉风格库/当代设计风格.md + 03 艺术史参考手册"
+    },
+    {
+      "id": "ar-061",
+      "name_cn": "徐悲鸿",
+      "name_en": "Xu Beihong",
+      "region": "东方",
+      "country": "中国(江苏宜兴)",
+      "birth_year": 1895,
+      "death_year": 1953,
+      "lifespan": "1895-1953",
+      "age": 58,
+      "primary_period": "中国近现代 · 1910s-1950s",
+      "primary_style": "写实主义 / 学院派",
+      "movements": [
+        "中国近现代",
+        "写实主义",
+        "学院派"
+      ],
+      "mediums": [
+        "油画",
+        "国画",
+        "素描"
+      ],
+      "bio_short": "中国现代美术教育奠基人,以法国学院派写实技法改造中国画,《奔马图》《田横五百士》代表 20 世纪中国写实主义巅峰。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": false,
+      "source_ref": "data/artworks-source-list.md 待补缺口(中国近现代) + 04_视觉风格库/艺术流派.md"
+    },
+    {
+      "id": "ar-062",
+      "name_cn": "张大千",
+      "name_en": "Zhang Daqian (Chang Dai-chien)",
+      "region": "东方",
+      "country": "中国(四川内江)",
+      "birth_year": 1899,
+      "death_year": 1983,
+      "lifespan": "1899-1983",
+      "age": 84,
+      "primary_period": "中国近现代 · 1920s-1980s",
+      "primary_style": "泼彩 / 摹古",
+      "movements": [
+        "中国近现代",
+        "泼彩山水",
+        "临摹敦煌"
+      ],
+      "mediums": [
+        "国画",
+        "泼彩",
+        "临摹"
+      ],
+      "bio_short": "20 世纪中国传统画转型代表,晚期融合西方抽象表现主义开创'泼彩山水',1940s 敦煌临摹奠定画史地位,与毕加索并称'东张西毕'。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": false,
+      "source_ref": "data/artworks-source-list.md 待补缺口(中国近现代) + 04_视觉风格库/艺术流派.md"
+    },
+    {
+      "id": "ar-063",
+      "name_cn": "林风眠",
+      "name_en": "Lin Fengmian",
+      "region": "东方",
+      "country": "中国(广东梅州)",
+      "birth_year": 1900,
+      "death_year": 1991,
+      "lifespan": "1900-1991",
+      "age": 91,
+      "primary_period": "中国近现代 · 1920s-1990s",
+      "primary_style": "中西融合 / 方纸布阵",
+      "movements": [
+        "中国近现代",
+        "中西融合",
+        "现代国画"
+      ],
+      "mediums": [
+        "国画",
+        "油画",
+        "瓷绘"
+      ],
+      "bio_short": "中国现代美术教育另一奠基人(与徐悲鸿并立),法国留学归来以方形构图 + 立体派色块 + 汉墓壁画传统开创'调和中西'的现代国画路径。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": false,
+      "source_ref": "data/artworks-source-list.md 待补缺口(中国近现代) + 04_视觉风格库/艺术流派.md"
     }
   ]
 }
