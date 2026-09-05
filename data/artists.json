@@ -2,16 +2,16 @@
   "meta": {
     "project": "ArtAdvisor",
     "module": "艺术家库 · Artists",
-    "version": "0.2.0",
-    "batch": 2,
-    "total": 63,
+    "version": "0.3.0",
+    "batch": 3,
+    "total": 73,
     "target": 200,
     "source": "data/artworks-source-list.md (66 候选) + data/artworks.json (70 部已入库) 双向聚合 + _ArtLib/03_艺术史参考(2026-05-30)",
     "created_at": "2026-09-03",
-    "updated_at": "2026-09-05",
+    "updated_at": "2026-09-06",
     "schema_version": "v1",
     "schema_fields": 19,
-    "note": "v0.1.0(09-03)53 位 + v0.2.0(09-05)batch 2 续推 10 位 = 63/200 (31.5%):① ar-054~056 极简主义补全 3 位(丹·弗莱文/艾格尼丝·马丁/唐纳德·贾德,与 03 艺术史参考手册第 7 节对齐,ar-054/055 作品尚未入库,linked_artwork_ids 空置);② ar-057 拉美补全 1 位(鲁菲诺·塔马约,tier A,与 ar-040 弗里达/欧姬芙同源拉美现代但段位更下游);③ ar-058 非洲当代补全 1 位(El Anatsui,tier A,加纳瓶盖金属装置,作品尚未入库);④ ar-059 包豪斯家具补全 1 位(马塞尔·布劳耶,与 ar-028 格罗皮乌斯/ ar-029 密斯同校但聚焦家具与钢管椅);⑤ ar-060 瑞士平面补全 1 位(约瑟夫·穆勒-布罗克曼,网格系统海报,作品未入库);⑥ ar-061~063 中国近现代补全 3 位(徐悲鸿写实/张大千泼彩/林风眠中西融合,东方区域从'传统水墨'段扩展到'近现代转型'新段,弥补 Phase 0 候选 4.5 中国近现代空缺);覆盖 6 区域 + 33 流派(本批新增极简/拉美现代/非洲当代/包豪斯家具/瑞士平面/中国近现代 6 段),tier S=49 / A=14(本批 8 S + 2 A);本批 10 位作品均未入库,linked_artwork_ids 全空,待 Phase 0 任务 2 续推 artworks 时按反向关联补全;后续 ar-064+ 候选(03 艺术史参考 + 04 视觉风格库 + 09 案例库):日本浮世绘(葛饰北斋/喜多川歌麿/歌川広重)/日本现代建筑(槙文彦/伊东丰雄/妹島和世)/北欧设计(阿尔瓦·阿尔托/汉斯·瓦格纳/阿恩·雅各布森)/数字当代(Refik Anadol/Beeple)/中国近现代补全(刘海粟/潘天寿/傅抱石)/包豪斯家具补(马歇尔·拉尤斯·布劳耶尔椅具)/美国抽象表现(波洛克/德·库宁/罗斯科已 ar-037)/超现实(恩斯特/马格利特已 ar-046/米罗)/ 摄影(韦斯顿/亚当斯/曼·雷)/ 拉美现代(博特罗)"
+    "note": "v0.1.0(09-03)53 位 + v0.2.0(09-05)batch 2 续推 10 位 + v0.3.0(09-06)batch 3 续推 10 位 = 73/200 (36.5%):① ar-064~066 日本浮世绘三杰 3 位(葛饰北斋/喜多川歌麿/歌川広重,东方区域从'传统水墨/茶道/枯山水'扩展到'江户版画'新段,补 Phase 0 候选浮世绘 0→3 缺口);② ar-067~069 日本现代建筑三杰 3 位(槙文彦/伊东丰雄/SANAA,东方建筑从'安藤/贝聿铭/王澍'扩展到'日本本土三杰'新段,补 Phase 0 候选日本现代建筑 0→3 缺口);③ ar-070~072 北欧设计三杰 3 位(阿尔托/瓦格纳/雅各布森,西方区域从'包豪斯/极简'扩展到'斯堪的纳维亚现代'新段,补 Phase 0 候选北欧设计 0→3 缺口);④ ar-073 美国直接摄影 1 位(韦斯顿,与 9-2 批次 7 补的达盖尔/布列松同源摄影但段位更下游的'现代主义摄影'段);覆盖 6 区域 + 37 流派(本批新增日本浮世绘/日本现代建筑/北欧现代主义/斯堪的纳维亚设计/f64 摄影 5 段),tier S=55 / A=18(本批 8 S + 2 A);本批 10 位作品均未入库,linked_artwork_ids 全空,待 Phase 0 任务 2 续推 artworks 时按反向关联补全;后续 ar-074+ 候选(03 艺术史参考 + 04 视觉风格库 + 09 案例库):数字当代(Refik Anadol/Beeple)/中国近现代补(刘海粟/潘天寿/傅抱石)/美国抽象表现补(波洛克/德·库宁/罗斯科已 ar-037)/超现实补(恩斯特/马格利特已 ar-046/米罗)/摄影补(亚当斯/曼·雷)/拉美现代补(博特罗)/包豪斯家具补(布劳耶已 ar-059)/中国当代补(蔡国强/徐冰/黄永砯)"
   },
   "artists": [
     {
@@ -1833,6 +1833,280 @@
       "tier": "S",
       "appraise_ready": false,
       "source_ref": "data/artworks-source-list.md 待补缺口(中国近现代) + 04_视觉风格库/艺术流派.md"
+    },
+    {
+      "id": "ar-064",
+      "name_cn": "葛饰北斋",
+      "name_en": "Katsushika Hokusai",
+      "region": "东方",
+      "country": "日本",
+      "birth_year": 1760,
+      "death_year": 1849,
+      "lifespan": "1760-1849",
+      "age": 89,
+      "primary_period": "江户 · 后期",
+      "primary_style": "浮世绘 / 锦绘",
+      "movements": [
+        "浮世绘",
+        "江户绘画",
+        "北画"
+      ],
+      "mediums": [
+        "木刻版画",
+        "绘画"
+      ],
+      "bio_short": "江户后期浮世绘巨匠,代表作《神奈川冲浪里》《富岳三十六景》,把日本版画从市井风俗推向风景画巅峰,并深刻影响 19 世纪欧洲印象派(梵高临摹《神奈川冲浪里》)。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·东方段"
+    },
+    {
+      "id": "ar-065",
+      "name_cn": "喜多川歌麿",
+      "name_en": "Kitagawa Utamaro",
+      "region": "东方",
+      "country": "日本",
+      "birth_year": 1753,
+      "death_year": 1806,
+      "lifespan": "1753-1806",
+      "age": 53,
+      "primary_period": "江户 · 中期",
+      "primary_style": "浮世绘 · 美人画",
+      "movements": [
+        "浮世绘",
+        "美人画"
+      ],
+      "mediums": [
+        "木刻版画",
+        "绘画"
+      ],
+      "bio_short": "江户中期浮世绘美人画大师,代表作《妇人相学十躰》《歌撰恋之部》,开创半身像大首绘,把江户市井女性的姿态与情感刻画到极致,德川时代审美符号。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·东方段"
+    },
+    {
+      "id": "ar-066",
+      "name_cn": "歌川広重",
+      "name_en": "Utagawa Hiroshige",
+      "region": "东方",
+      "country": "日本",
+      "birth_year": 1797,
+      "death_year": 1858,
+      "lifespan": "1797-1858",
+      "age": 60,
+      "primary_period": "江户 · 末期",
+      "primary_style": "浮世绘 · 风景画",
+      "movements": [
+        "浮世绘",
+        "风景画",
+        "歌川派"
+      ],
+      "mediums": [
+        "木刻版画",
+        "绘画"
+      ],
+      "bio_short": "江户末期浮世绘风景画巨匠,代表作《东海道五十三次》《名所江户百景》,与北斋并称浮世绘双壁,对印象派莫奈《日出·印象》构图有直接启发。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·东方段"
+    },
+    {
+      "id": "ar-067",
+      "name_cn": "槙文彦",
+      "name_en": "Fumihiko Maki",
+      "region": "东方",
+      "country": "日本",
+      "birth_year": 1928,
+      "death_year": 2024,
+      "lifespan": "1928-2024",
+      "age": 95,
+      "primary_period": "现代 · 战后",
+      "primary_style": "现代主义建筑 / 集合体形式",
+      "movements": [
+        "新陈代谢派(外围)",
+        "现代主义建筑",
+        "日本现代建筑"
+      ],
+      "mediums": [
+        "建筑"
+      ],
+      "bio_short": "日本现代主义建筑三杰之一(与丹下健三/矶崎新),代表作代官山 Hillside Terrace(1969-1992,渐进式集合体)、Spiral(1985,东京),2024 年辞世,获普利兹克奖(1993)。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·建筑段"
+    },
+    {
+      "id": "ar-068",
+      "name_cn": "伊东丰雄",
+      "name_en": "Toyo Ito",
+      "region": "东方",
+      "country": "日本",
+      "birth_year": 1941,
+      "death_year": null,
+      "lifespan": "1941-",
+      "age": 85,
+      "primary_period": "当代",
+      "primary_style": "轻量化建筑 / 流动性空间",
+      "movements": [
+        "当代建筑",
+        "日本现代建筑",
+        "解构倾向"
+      ],
+      "mediums": [
+        "建筑"
+      ],
+      "bio_short": "日本当代建筑大师,代表作仙台媒体中心(2001,透明管状结构)、多摩美术大学图书馆(2007,板岩覆盖拱形),2013 年普利兹克奖得主,强调建筑与自然/城市的轻、透、流。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·建筑段"
+    },
+    {
+      "id": "ar-069",
+      "name_cn": "妹島和世 + 西泽立卫",
+      "name_en": "Kazuyo Sejima + Ryue Nishizawa (SANAA)",
+      "region": "东方",
+      "country": "日本",
+      "birth_year": 1956,
+      "death_year": null,
+      "lifespan": "1956-(妹島) / 1966-(西泽)",
+      "age": 69,
+      "primary_period": "当代",
+      "primary_style": "消解式建筑 / 透明性",
+      "movements": [
+        "当代建筑",
+        "日本现代建筑",
+        "SANAA"
+      ],
+      "mediums": [
+        "建筑"
+      ],
+      "bio_short": "SANAA 建筑事务所(1995),代表作金泽 21 世纪美术馆(2004,圆形透明展厅)、纽约新当代艺术博物馆(2007),2010 年普利兹克奖,建筑消隐于环境,主张透明、轻盈、流动的城市性。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·建筑段"
+    },
+    {
+      "id": "ar-070",
+      "name_cn": "阿尔瓦·阿尔托",
+      "name_en": "Alvar Aalto",
+      "region": "西方",
+      "country": "芬兰",
+      "birth_year": 1898,
+      "death_year": 1976,
+      "lifespan": "1898-1976",
+      "age": 78,
+      "primary_period": "现代 · 中期",
+      "primary_style": "人文主义现代主义 / 芬兰地域性",
+      "movements": [
+        "现代主义建筑",
+        "北欧现代主义",
+        "功能主义"
+      ],
+      "mediums": [
+        "建筑",
+        "家具设计"
+      ],
+      "bio_short": "芬兰现代主义建筑之父,代表作帕伊米奥结核病疗养院(1929)、玛丽亚别墅(1938,流动曲线)、萨沃伊花瓶(1936),把北欧自然/木材/光线融入现代主义,与柯布/密斯/格罗皮乌斯并称现代建筑四大师。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·建筑/设计段"
+    },
+    {
+      "id": "ar-071",
+      "name_cn": "汉斯·瓦格纳",
+      "name_en": "Hans J. Wegner",
+      "region": "西方",
+      "country": "丹麦",
+      "birth_year": 1914,
+      "death_year": 2007,
+      "lifespan": "1914-2007",
+      "age": 92,
+      "primary_period": "现代 · 中期",
+      "primary_style": "丹麦现代家具 / 极简木工",
+      "movements": [
+        "斯堪的纳维亚设计",
+        "丹麦现代主义"
+      ],
+      "mediums": [
+        "家具设计"
+      ],
+      "bio_short": "丹麦现代家具设计之父,代表作 Wishbone Chair(Y椅,1949)、The Chair(1949,美国总统大选辩论座椅)、PP501,一生设计 500+ 椅,把手工榫卯与工业化生产结合到极致。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·设计段"
+    },
+    {
+      "id": "ar-072",
+      "name_cn": "阿恩·雅各布森",
+      "name_en": "Arne Jacobsen",
+      "region": "西方",
+      "country": "丹麦",
+      "birth_year": 1902,
+      "death_year": 1971,
+      "lifespan": "1902-1971",
+      "age": 69,
+      "primary_period": "现代 · 中期",
+      "primary_style": "丹麦功能主义 / 曲线现代",
+      "movements": [
+        "斯堪的纳维亚设计",
+        "丹麦现代主义",
+        "功能主义"
+      ],
+      "mediums": [
+        "建筑",
+        "家具设计",
+        "工业设计"
+      ],
+      "bio_short": "丹麦功能主义代表,代表作 Egg Chair(1958)、Swan Chair(1958,哥本哈根 SAS 皇家酒店)、Ant Chair(1952,3 腿胶合板),把建筑/家具/产品三类设计打通,北欧现代主义旗手。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "A",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·设计段"
+    },
+    {
+      "id": "ar-073",
+      "name_cn": "爱德华·韦斯顿",
+      "name_en": "Edward Weston",
+      "region": "西方",
+      "country": "美国",
+      "birth_year": 1886,
+      "death_year": 1958,
+      "lifespan": "1886-1958",
+      "age": 71,
+      "primary_period": "现代 · 中期",
+      "primary_style": "直接摄影 / 纯粹形态",
+      "movements": [
+        "直接摄影(Straight Photography)",
+        "f/64 小组",
+        "现代主义摄影"
+      ],
+      "mediums": [
+        "摄影"
+      ],
+      "bio_short": "美国现代主义摄影大师,代表作《青椒 #30》(1930)《裸体》(1936)《沙丘》(1934-1940),与亚当斯共创 f/64 小组,主张大画幅高分辨率直接呈现,反对画意摄影的柔焦。",
+      "linked_artwork_ids": [],
+      "linked_artwork_count": 0,
+      "tier": "S",
+      "appraise_ready": true,
+      "source_ref": "_ArtLib/03_艺术史参考(2026-05-30)+ 04_视觉风格库·摄影段"
     }
   ]
 }
