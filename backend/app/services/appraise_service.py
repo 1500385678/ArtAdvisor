@@ -14,10 +14,10 @@
 
 Phase 1 MVP 集成路径 (docs/鉴赏讲解模板.md 第五节):
 - [x] T1 静态加载模板 (本文件) —— 2026-09-08 闭环
-- [~] T2 /appraise?artwork_id=aw-001 接口联通(返回 5 维 JSON)—— 本文件提供 evaluate() 函数,接口联通留待 T5
-- [ ] T3 LLM 调用 (Claude / GPT-4o) 按 prompt 骨架填充
-- [ ] T4 缓存到 data/appraise/{id}.json
-- [ ] T5 前端 5 维分 Tab 展示
+- [x] T2 /appraise?artwork_id=aw-001 接口联通(返回 5 维 JSON)—— 2026-09-09 闭环 commit 50e71db
+- [ ] T3 LLM 调用 (Claude / GPT-4o) 按 prompt 骨架填充 —— 待张勇决策
+- [x] T4 缓存到 data/appraise/{id}.json —— 2026-09-11 闭环 save_cached() + _load_cached() 自检读回通过
+- [ ] T5 前端 5 维分 Tab 展示 —— 待 React 工程
 """
 from __future__ import annotations
 
@@ -186,6 +186,36 @@ def _load_cached(artwork_id: str) -> dict[str, Any] | None:
         return json.load(f)
 
 
+def save_cached(artwork_id: str, result: dict[str, Any]) -> Path:
+    """将 5 维鉴赏结果落盘到 data/appraise/{id}.json (T4 缓存层).
+
+    Args:
+        artwork_id: 形如 "aw-001" 的作品编号
+        result: 符合 TEMPLATE_SCHEMA 的 5 维 JSON dict (含 3 元字段)
+
+    Returns:
+        落盘后的 Path (data/appraise/{artwork_id}.json)
+
+    行为契约:
+    - 自动 mkdir -p _CACHE_DIR(空目录自然产生,git 不跟踪)
+    - ensure_ascii=False 保留中文字段
+    - indent=2 便于人读 + git diff
+    - 覆盖写:Phase 2 接入 LLM 后,同一 id 会被新版 generator 覆盖
+    - 落盘不入库:`.gitignore` 已设 `data/appraise/*.json`(LLM 产物不污染 repo)
+
+    关联:
+    - T3 LLM 调用层生成 result 后,显式调用 save_cached(id, result) 持久化
+    - T5 前端分 Tab 触发时,evaluate() 走 _load_cached() 命中,跳过 LLM
+    """
+    _CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_path = _CACHE_DIR / f"{artwork_id}.json"
+    cache_path.write_text(
+        json.dumps(result, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return cache_path
+
+
 # ----------------------------------------------------------------------------
 # 公开 API
 # ----------------------------------------------------------------------------
@@ -250,8 +280,8 @@ def evaluate(artwork_id: str, *, use_cache: bool = True) -> dict[str, Any]:
 # ----------------------------------------------------------------------------
 
 def _self_check() -> None:
-    """开发期自检:验证 evaluate() 产出符合 TEMPLATE_SCHEMA."""
-    # aw-001 命中内置 demo,aw-070 走 fallback 骨架路径
+    """开发期自检:验证 evaluate() 产出符合 TEMPLATE_SCHEMA + T4 落盘读回闭环."""
+    # 1. aw-001 命中内置 demo,aw-070 走 fallback 骨架路径
     for aw_id in ["aw-001", "aw-070"]:
         result = evaluate(aw_id)
         assert result["template_version"] == TEMPLATE_VERSION
@@ -260,6 +290,23 @@ def _self_check() -> None:
             for f in fields:
                 assert f in result[dim], f"missing field={dim}.{f} in {aw_id}"
         print(f"[ok] {aw_id} -> {result['generator']}")
+
+    # 2. T4 落盘读回闭环:aw-002 走 skeleton → 显式 save_cached → 重读 cache
+    #    验证 save_cached() + _load_cached() 双向打通,无副作用(自检结束 unlink)
+    aw_id = "aw-002"
+    skeleton = evaluate(aw_id, use_cache=False)
+    cache_path = save_cached(aw_id, skeleton)
+    reloaded = _load_cached(aw_id)
+    assert reloaded is not None, f"{aw_id} cache 落盘后读回为 None"
+    assert reloaded["artwork_id"] == aw_id
+    assert reloaded["generator"] == skeleton["generator"]
+    for dim, fields in TEMPLATE_SCHEMA.items():
+        for f in fields:
+            assert reloaded[dim][f] == "无明确记载", (
+                f"{aw_id} cache 读回 {dim}.{f} != skeleton"
+            )
+    cache_path.unlink()
+    print(f"[ok] {aw_id} -> cache 落盘 → 读回校验通过 (T4 闭环,已清理)")
 
 
 if __name__ == "__main__":
@@ -272,4 +319,5 @@ __all__ = [
     "evaluate",
     "list_known_ids",
     "is_known",
+    "save_cached",
 ]

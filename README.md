@@ -38,14 +38,16 @@ open http://127.0.0.1:8000/docs
 - 巡检日志: [`.Log/巡检-艺术-YYYYMMDD.md`](.Log/)
 - 当日计划: [`.plan/YYYYMMDD.md`](.plan/)
 - 候选池: [`data/artworks-source-list.md`](data/artworks-source-list.md) / [`data/themes-index.md`](data/themes-index.md)
-- 作品库: [`data/artworks.json`](data/artworks.json) — Phase 0 累计 20/500
+- 作品库: [`data/artworks.json`](data/artworks.json) — Phase 0 累计 70/500 (14%)
+- 艺术家库: [`data/artists.json`](data/artists.json) — v0.3.0 / 73/200 (36.5%)
+- 鉴赏缓存: `data/appraise/{id}.json` (git ignore,LLM 产物不入库)
 
 ## 阶段状态
 
 | 阶段 | 状态 | 进度 |
 |------|------|------|
-| **Phase 0** 资产盘点 | 🟡 进行中 | 2/6 checkbox · artworks 20/500 (4%) |
-| **Phase 1** MVP | 🟡 起步 | 0.x 骨架已落 (FastAPI 5 接口 + /health) |
+| **Phase 0** 资产盘点 | 🟡 进行中 | 4/6 checkbox · artworks 70/500 (14%) · artists 73/200 (36.5%) |
+| **Phase 1** MVP | 🟡 起步 | 2/7 checkbox · 5 接口 + /health + /appraise 3 端点联通 + 5 维模板 + T4 缓存 |
 | **Phase 2-4** | ⚪ 远期 | — |
 
 ## 关联文档

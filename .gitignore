@@ -8,3 +8,5 @@ backend/.venv/
 backend/**/__pycache__/
 backend/**/*.pyc
 backend/.env
+# T4 鉴赏缓存 (LLM 产物 + 自检残留,不入库)
+data/appraise/*.json
