@@ -1,7 +1,7 @@
 # ArtAdvisor API 参考 · Phase 1 MVP 现状
 
-> ArtAdvisor REST API 接口文档 · v1.0 · 2026-09-10
-> 适用阶段:**Phase 1 MVP 骨架**(`/gallery` 联通数据层 + `/appraise` 联通 services,其余 3 桩)
+> ArtAdvisor REST API 接口文档 · v1.0.1 · 2026-09-12
+> 适用阶段:**Phase 1 MVP 骨架**(`/gallery` 联通数据层 + `/appraise` 联通 services + T4 缓存配套 `/cached`,其余 3 桩)
 > 维护:07-艺术-Art 行业顾问
 
 ---
@@ -30,6 +30,7 @@
 | Vision · 作品识别 | `GET /vision` | 🟡 桩 | — | Phase 3 |
 | Appraise · 5 维讲解 | `GET /appraise?artwork_id=...` | ✅ 已联通 | `services/appraise_service.py` | T2 (T3-T5 待 Phase 2) |
 | Appraise · 清单 | `GET /appraise/known` | ✅ 已联通 | 同上 | T2 |
+| Appraise · 缓存清单 | `GET /appraise/cached` | ✅ 已联通 (2026-09-12) | `data/appraise/*.json` | T4 配套 |
 | Appraise · Demo | `GET /appraise/demo` | ✅ 已联通 | 同上 | T2 |
 | Create · 创作辅助 | `GET /create` | 🟡 桩 | — | Phase 3 |
 | Cure · 虚拟策展 | `GET /cure` | 🟡 桩 | — | Phase 3 |
@@ -206,6 +207,23 @@ curl http://127.0.0.1:8000/health
 ```
 
 > 当前 count=1(仅 aw-001 内置蒙娜丽莎 demo);其余 69 部走 skeleton 路径(T3 LLM 调用后扩展)
+
+### `GET /appraise/cached`
+
+仅 `data/appraise/*.json` 已落盘缓存的 `artwork_id` 清单(**不含**内置 demo)。
+
+**响应** · `200 OK`
+
+```json
+{
+  "template_version": "appraise-5dim-v1.0",
+  "cached_ids": [],
+  "count": 0
+}
+```
+
+> Phase 1 MVP 阶段空目录(T3 LLM 未启动)→ `cached_ids: []`,`count: 0`;空集合返回 `200` 而非 `404`,便于前端"已鉴赏"Tab 渲染。
+> T3 接入 LLM 后,本端点返回 LLM 已落盘的 artwork_id 集合,可用于覆盖度指标。
 
 ### `GET /appraise/demo`
 

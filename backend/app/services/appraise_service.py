@@ -229,6 +229,19 @@ def list_known_ids() -> list[str]:
     return sorted(known)
 
 
+def list_cached_ids() -> list[str]:
+    """列出 data/appraise/ 下已落盘的 artwork_id (仅缓存命中,不含内置 demo).
+
+    Phase 1 MVP 用途:
+    - /appraise/cached 端点数据源
+    - T5 前端"已鉴赏"Tab 数据来源
+    - Phase 2 接入 LLM 后,可按此列表估算 LLM 覆盖度
+    """
+    if not _CACHE_DIR.exists():
+        return []
+    return sorted(p.stem for p in _CACHE_DIR.glob("*.json"))
+
+
 def is_known(artwork_id: str) -> bool:
     """快速判断 artwork_id 是否能产出 5 维内容 (demo 或缓存命中)."""
     return artwork_id in _DEMO_INDEX or (_CACHE_DIR / f"{artwork_id}.json").exists()
@@ -308,6 +321,10 @@ def _self_check() -> None:
     cache_path.unlink()
     print(f"[ok] {aw_id} -> cache 落盘 → 读回校验通过 (T4 闭环,已清理)")
 
+    # 3. list_cached_ids() 在 cache 存在 / 缺失两态下行为正确
+    assert "aw-002" not in list_cached_ids(), "aw-002 unlink 后不应仍在 list_cached_ids"
+    print(f"[ok] list_cached_ids() -> {list_cached_ids()} (unlink 后空集合,T4 配套)")
+
 
 if __name__ == "__main__":
     _self_check()
@@ -318,6 +335,7 @@ __all__ = [
     "TEMPLATE_SCHEMA",
     "evaluate",
     "list_known_ids",
+    "list_cached_ids",
     "is_known",
     "save_cached",
 ]
