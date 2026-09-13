@@ -17,6 +17,7 @@ Phase 1 MVP 集成路径 (docs/鉴赏讲解模板.md 第五节):
 - [x] T2 /appraise?artwork_id=aw-001 接口联通(返回 5 维 JSON)—— 2026-09-09 闭环 commit 50e71db
 - [ ] T3 LLM 调用 (Claude / GPT-4o) 按 prompt 骨架填充 —— 待张勇决策
 - [x] T4 缓存到 data/appraise/{id}.json —— 2026-09-11 闭环 save_cached() + _load_cached() 自检读回通过
+- [x] T4 配套 cache_stats() + /appraise/cached/stats 端点 —— 2026-09-14 闭环(代码层第 6 阶段,纯代码,无新决策)
 - [ ] T5 前端 5 维分 Tab 展示 —— 待 React 工程
 """
 from __future__ import annotations
@@ -242,6 +243,76 @@ def list_cached_ids() -> list[str]:
     return sorted(p.stem for p in _CACHE_DIR.glob("*.json"))
 
 
+def cache_stats() -> dict[str, Any]:
+    """返回 data/appraise/ 缓存目录的覆盖度指标 (代码层第 6 阶段 · 2026-09-14).
+
+    Phase 1 MVP 用途:
+    - /appraise/cached/stats 端点数据源
+    - Phase 2 接入 LLM 后,作为 LLM 覆盖度观测端点
+    - 不读 .json 内容,只 stat 文件元信息(性能友好,70+ 部毫秒级)
+
+    Returns:
+        {
+          "template_version": str,            # 当前 5 维模板版本
+          "count": int,                       # 缓存命中数(不含内置 demo)
+          "total_size_bytes": int,            # 全部 .json 文件字节数累计
+          "distinct_generators": list[str],   # 出现的不同 generator 字符串(去重)
+          "newest_mtime": str | None,         # 最新文件 mtime (ISO 格式,UTC)
+          "oldest_mtime": str | None,         # 最早文件 mtime (ISO 格式,UTC)
+        }
+
+    行为契约:
+    - 空目录 / 不存在 → count=0 / total_size_bytes=0 / distinct_generators=[] / mtime=None
+    - 不抛异常(空目录是正常状态,Phase 1 MVP 阶段 T3 LLM 未启动)
+    - mtime 用 datetime.fromtimestamp + UTC 时区 + ISO 格式(与 generated_at 字段对齐)
+    - distinct_generators 最多保留前 10 个不同 generator(避免某些 LLM 版本注入随机字符串)
+    """
+    if not _CACHE_DIR.exists():
+        return {
+            "template_version": TEMPLATE_VERSION,
+            "count": 0,
+            "total_size_bytes": 0,
+            "distinct_generators": [],
+            "newest_mtime": None,
+            "oldest_mtime": None,
+        }
+    files = sorted(_CACHE_DIR.glob("*.json"))
+    if not files:
+        return {
+            "template_version": TEMPLATE_VERSION,
+            "count": 0,
+            "total_size_bytes": 0,
+            "distinct_generators": [],
+            "newest_mtime": None,
+            "oldest_mtime": None,
+        }
+    total_size = sum(p.stat().st_size for p in files)
+    mtimes = [p.stat().st_mtime for p in files]
+    generators: set[str] = set()
+    for p in files:
+        try:
+            with p.open(encoding="utf-8") as f:
+                meta = json.load(f)
+            gen = meta.get("generator")
+            if isinstance(gen, str):
+                generators.add(gen)
+        except (OSError, json.JSONDecodeError, UnicodeDecodeError):
+            # 单个文件读失败不影响整体统计
+            continue
+    return {
+        "template_version": TEMPLATE_VERSION,
+        "count": len(files),
+        "total_size_bytes": total_size,
+        "distinct_generators": sorted(generators)[:10],
+        "newest_mtime": _dt.datetime.fromtimestamp(
+            max(mtimes), tz=_dt.timezone.utc
+        ).isoformat(timespec="seconds"),
+        "oldest_mtime": _dt.datetime.fromtimestamp(
+            min(mtimes), tz=_dt.timezone.utc
+        ).isoformat(timespec="seconds"),
+    }
+
+
 def is_known(artwork_id: str) -> bool:
     """快速判断 artwork_id 是否能产出 5 维内容 (demo 或缓存命中)."""
     return artwork_id in _DEMO_INDEX or (_CACHE_DIR / f"{artwork_id}.json").exists()
@@ -325,6 +396,15 @@ def _self_check() -> None:
     assert "aw-002" not in list_cached_ids(), "aw-002 unlink 后不应仍在 list_cached_ids"
     print(f"[ok] list_cached_ids() -> {list_cached_ids()} (unlink 后空集合,T4 配套)")
 
+    # 4. cache_stats() 空目录路径:T3 LLM 未启动场景
+    stats = cache_stats()
+    assert stats["count"] == 0
+    assert stats["total_size_bytes"] == 0
+    assert stats["distinct_generators"] == []
+    assert stats["newest_mtime"] is None
+    assert stats["oldest_mtime"] is None
+    print(f"[ok] cache_stats() -> count=0 / size=0 / generators=[] / mtime=None (空目录,T4 配套 stats)")
+
 
 if __name__ == "__main__":
     _self_check()
@@ -336,6 +416,7 @@ __all__ = [
     "evaluate",
     "list_known_ids",
     "list_cached_ids",
+    "cache_stats",
     "is_known",
     "save_cached",
 ]

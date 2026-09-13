@@ -1,17 +1,19 @@
 """/appraise 路由 · 鉴赏讲解 (Phase 1 MVP T2 联通,沿用 services/appraise_service.py).
 
 端点:
-- GET /appraise?artwork_id=aw-001  → 5 维 JSON(主端点,联通 evaluate())
-- GET /appraise/known              → 当前可产出 5 维的 artwork_id 清单(list_known_ids)
-- GET /appraise/cached             → 仅缓存命中(data/appraise/*.json)的 artwork_id 清单
-- GET /appraise/demo               → 快速预览 aw-001 demo(无 query)
+- GET /appraise?artwork_id=aw-001      → 5 维 JSON(主端点,联通 evaluate())
+- GET /appraise/known                  → 当前可产出 5 维的 artwork_id 清单(list_known_ids)
+- GET /appraise/cached                 → 仅缓存命中(data/appraise/*.json)的 artwork_id 清单
+- GET /appraise/cached/stats           → 缓存覆盖度指标(count / size / generators / mtime)
+- GET /appraise/demo                   → 快速预览 aw-001 demo(无 query)
 
 承接:
 - T1 静态加载模板(2026-09-08 闭环 commit b0ec730) · 5 维 schema 在 services 层
 - T2 接口联通(本文件,2026-09-09 闭环)
 - T3 LLM 调用(待 Phase 2)
 - T4 缓存到 data/appraise/{id}.json(2026-09-11 闭环 commit bfaaf46,save_cached + _load_cached)
-- T4 缓存配套 list_cached_ids 端点(2026-09-12 闭环,本文件 /cached)
+- T4 缓存配套 list_cached_ids + /cached 端点(2026-09-12 闭环 commit 8eb9ece)
+- T4 缓存配套 stats 端点(2026-09-14 闭环,本文件 /cached/stats,代码层第 6 阶段,无新决策)
 - T5 前端 5 维分 Tab(待 React 工程)
 """
 from __future__ import annotations
@@ -20,6 +22,7 @@ from fastapi import APIRouter, HTTPException, Query
 
 from app.services.appraise_service import (
     TEMPLATE_VERSION,
+    cache_stats,
     evaluate,
     list_cached_ids,
     list_known_ids,
@@ -81,6 +84,25 @@ def cached() -> dict:
         "cached_ids": ids,
         "count": len(ids),
     }
+
+
+@router.get("/cached/stats", summary="data/appraise/ 缓存覆盖度指标")
+def cached_stats() -> dict:
+    """data/appraise/ 缓存目录的覆盖度指标(代码层第 6 阶段 · 2026-09-14 闭环).
+
+    返回字段:
+    - count:缓存命中数(不含内置 demo)
+    - total_size_bytes:全部 .json 文件字节数累计
+    - distinct_generators:出现的不同 generator 字符串(去重,最多 10 个)
+    - newest_mtime / oldest_mtime:最新 / 最早文件 mtime(ISO 格式,UTC)
+
+    用途:
+    - Phase 2 接入 LLM 后,作为 LLM 覆盖度观测端点(进度条 / 仪表盘)
+    - T5 前端"已鉴赏"Tab 可选展示 统计 角标
+    - 运维自检:确认 LLM 任务跑成功后落盘正常
+    - 空目录 / 未启动 LLM → 全 0 / 空集合 / mtime=None,不抛异常
+    """
+    return cache_stats()
 
 
 @router.get("/demo", summary="快速预览 aw-001 5 维 demo")

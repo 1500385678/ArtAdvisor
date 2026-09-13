@@ -1,7 +1,7 @@
 # ArtAdvisor API 参考 · Phase 1 MVP 现状
 
-> ArtAdvisor REST API 接口文档 · v1.0.1 · 2026-09-12
-> 适用阶段:**Phase 1 MVP 骨架**(`/gallery` 联通数据层 + `/appraise` 联通 services + T4 缓存配套 `/cached`,其余 3 桩)
+> ArtAdvisor REST API 接口文档 · v1.0.2 · 2026-09-14
+> 适用阶段:**Phase 1 MVP 骨架**(`/gallery` 联通数据层 + `/appraise` 联通 services + T4 缓存配套 `/cached` + `/cached/stats` 覆盖度指标端点,其余 3 桩)
 > 维护:07-艺术-Art 行业顾问
 
 ---
@@ -31,6 +31,7 @@
 | Appraise · 5 维讲解 | `GET /appraise?artwork_id=...` | ✅ 已联通 | `services/appraise_service.py` | T2 (T3-T5 待 Phase 2) |
 | Appraise · 清单 | `GET /appraise/known` | ✅ 已联通 | 同上 | T2 |
 | Appraise · 缓存清单 | `GET /appraise/cached` | ✅ 已联通 (2026-09-12) | `data/appraise/*.json` | T4 配套 |
+| Appraise · 缓存统计 | `GET /appraise/cached/stats` | ✅ 已联通 (2026-09-14) | `data/appraise/*.json` | T4 配套 stats |
 | Appraise · Demo | `GET /appraise/demo` | ✅ 已联通 | 同上 | T2 |
 | Create · 创作辅助 | `GET /create` | 🟡 桩 | — | Phase 3 |
 | Cure · 虚拟策展 | `GET /cure` | 🟡 桩 | — | Phase 3 |
@@ -225,6 +226,46 @@ curl http://127.0.0.1:8000/health
 > Phase 1 MVP 阶段空目录(T3 LLM 未启动)→ `cached_ids: []`,`count: 0`;空集合返回 `200` 而非 `404`,便于前端"已鉴赏"Tab 渲染。
 > T3 接入 LLM 后,本端点返回 LLM 已落盘的 artwork_id 集合,可用于覆盖度指标。
 
+### `GET /appraise/cached/stats`
+
+`data/appraise/` 缓存目录的覆盖度指标(代码层第 6 阶段 · 2026-09-14 闭环)。
+
+**响应** · `200 OK`
+
+```json
+{
+  "template_version": "appraise-5dim-v1.0",
+  "count": 0,
+  "total_size_bytes": 0,
+  "distinct_generators": [],
+  "newest_mtime": null,
+  "oldest_mtime": null
+}
+```
+
+**字段说明**
+
+| 字段 | 类型 | 含义 |
+|------|------|------|
+| `count` | int | 缓存命中数(不含内置 demo) |
+| `total_size_bytes` | int | 全部 `.json` 文件字节数累计 |
+| `distinct_generators` | list[str] | 出现的不同 `generator` 字符串(去重,最多 10 个) |
+| `newest_mtime` | string \| null | 最新文件 mtime(ISO 格式,UTC) |
+| `oldest_mtime` | string \| null | 最早文件 mtime(ISO 格式,UTC) |
+
+**用途**
+
+- Phase 2 接入 LLM 后,作为 LLM 覆盖度观测端点(进度条 / 仪表盘)
+- T5 前端"已鉴赏"Tab 可选展示 统计 角标(`count` + `total_size_bytes`)
+- 运维自检:确认 LLM 任务跑成功后落盘正常
+
+**行为契约**
+
+- 空目录 / 不存在 → 全 0 / 空集合 / mtime=`null`,不抛异常
+- 不读 `.json` 内容,只 stat 文件元信息(性能友好,70+ 部毫秒级)
+- mtime 用 `datetime.fromtimestamp` + UTC 时区 + ISO 格式(与 `generated_at` 字段对齐)
+- `distinct_generators` 最多保留前 10 个不同 generator(避免某些 LLM 版本注入随机字符串)
+
 ### `GET /appraise/demo`
 
 快速预览 aw-001 demo(无 query)。
@@ -303,10 +344,12 @@ curl http://127.0.0.1:8000/health
 | T1 | services 静态加载模板 | ✅ 已闭环 | `b0ec730` (2026-09-08) |
 | T2 | `/appraise` 接口联通(返回 5 维 JSON) | ✅ 已闭环 | `50e71db` (2026-09-09) |
 | T3 | LLM 调用(Claude / GPT-4o)按 prompt 骨架填充 | ⏳ 待启动 | — |
-| T4 | 缓存到 `data/appraise/{id}.json` | ⏳ 待启动 | services 层已预留 `_load_cached()` |
+| T4 | 缓存到 `data/appraise/{id}.json` | ✅ 已闭环 | `bfaaf46` (2026-09-11) save + load |
+| T4 配套 | `list_cached_ids` + `/appraise/cached` 端点 | ✅ 已闭环 | `8eb9ece` (2026-09-12) |
+| T4 配套 stats | `cache_stats()` + `/appraise/cached/stats` 端点(覆盖度指标) | ✅ 已闭环 | (2026-09-14) |
 | T5 | 前端 5 维分 Tab 展示 | ⏳ 待启动 | — |
 
-**当前阻塞链**:T1+T2 已闭环 → T3 LLM 调用是下一可独立启动子任务(不涉及新决策)。
+**当前阻塞链**:T1 + T2 + T4 + T4 配套 + T4 配套 stats 共 5 阶段代码层闭环 → 阻塞链仍 2 步(T3 LLM + T5 前端);代码层可独立闭环阶段已触天花板,后续必须等待决策依赖项解锁。
 
 ---
 
@@ -324,6 +367,8 @@ curl http://127.0.0.1:8000/health
 ## 十、变更记录
 
 - **2026-09-10 v1.0**:首版落盘,梳理 5 大接口(11 端点) + Phase 1 MVP 阻塞链;`docs/api/` 首份文档
+- **2026-09-12 v1.0.1**:T4 缓存配套 `list_cached_ids` 端点(11 → 12 端点)
+- **2026-09-14 v1.0.2**:T4 缓存配套 stats 端点 `cache_stats()` + `/appraise/cached/stats`(12 → 13 端点);同步 Phase 1 MVP 阻塞链表(代码层 5 阶段)
 - 后续随 `/appraise` T3 LLM 接入 + `/gallery` 续推到 500 部 + `/vision` 桩变实,逐项更新
 
 ---
