@@ -47,7 +47,7 @@ open http://127.0.0.1:8000/docs
 | 阶段 | 状态 | 进度 |
 |------|------|------|
 | **Phase 0** 资产盘点 | 🟡 进行中 | 4/6 checkbox · artworks 70/500 (14%) · artists 73/200 (36.5%) |
-| **Phase 1** MVP | 🟡 起步 | 2/7 checkbox · 5 接口 + /health + /appraise 5 端点联通(含 /appraise/cached + /appraise/cached/stats) + 5 维模板 + T4 缓存 |
+| **Phase 1** MVP | 🟡 起步 | 2/7 checkbox · 5 接口 + /health + /appraise 5 端点联通(含 /appraise/cached + /appraise/cached/stats) + 5 维模板 + T4 缓存 + T3 prompt 骨架 · 代码层 8 阶段连续闭环 |
 | **Phase 2-4** | ⚪ 远期 | — |
 
 ## 关联文档
